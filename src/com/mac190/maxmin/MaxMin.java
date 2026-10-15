@@ -27,4 +27,72 @@ by a (if a is negative then max and min invert).
 
  */
 public class MaxMin {
+    private int min, max;
+    //default construtor
+    public MaxMin(){
+        min = max =0;
+    }
+    public MaxMin(int a){
+        min = max =a;
+    }
+    public MaxMin(int a, int b){
+        min = a;
+        max = b;
+        if(a > b){
+            min = b;
+            max = a;
+        }
+    }
+    //getters
+    public int getMin(){
+        return min;
+    }
+    public int getMax(){
+        return max;
+    }
+    //setters
+    public void setMin(int a){
+        if(a > this.max){
+            this.min = this.max;
+            this.max = a;
+        }else{
+            min = a;
+        }
+    }
+    public void setMax(int a){
+        if(a < this.min){
+            this.max = this.min;
+            this.min = a;
+        }else{
+            max = a;
+        }
+    }
+    public void setMaxMin(int a, int b){
+        min = a;
+        max = b;
+        if(a > b){
+            min = b;
+            max = a;
+        }
+    }
+    public String toString(){
+        return "(" + min + ", " + max + ")";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null || !obj.getClass().equals(this.getClass())) return false;
+        MaxMin m = (MaxMin) obj;
+        if(this.min == m.min && this.max == m.max) return true;
+        return false;
+    }
+    public MaxMin add(MaxMin m){
+        return new MaxMin(this.min + m.max, this.max + m.max);
+    }
+    public MaxMin add(int a){
+        return new MaxMin(this.min + a, this.max + a);
+    }
+    public MaxMin multiply(int a){
+        return new MaxMin(this.min*a, this.max*a);
+    }
 }
