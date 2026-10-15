@@ -17,7 +17,7 @@ public class MaxMinTester {
         System.out.println("M3: " + M3);
         //in one single instruction.
         //Perform M3 = M3*(-2) + 2*(M1 + M2)
-
+        M3 = M3.multiply(-2).add(M1.add(M2).multiply(2));
         System.out.println("M3: " + M3);
 
     }

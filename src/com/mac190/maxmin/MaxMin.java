@@ -87,7 +87,7 @@ public class MaxMin {
         return false;
     }
     public MaxMin add(MaxMin m){
-        return new MaxMin(this.min + m.max, this.max + m.max);
+        return new MaxMin(this.min + m.min, this.max + m.max);
     }
     public MaxMin add(int a){
         return new MaxMin(this.min + a, this.max + a);
