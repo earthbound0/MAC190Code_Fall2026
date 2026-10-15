@@ -49,16 +49,18 @@ public class Even {
         return str;
     }
 
-    public boolean equals(Even E) {
-        //Here we have two Even objects: this and E
-        //this is the object on which a method is invoked.
-        //When you cann a method you have to call it on an object like:
-        // obj1.method(...)  this will refer to obj1
-        if(this.even == E.even){
-            return true;
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null || !obj.getClass().equals(this.getClass())){
+            return false;
         }
+        //The object onj is not null and is of the class Even
+        //make an object Even out of it
+        Even E = (Even) obj;
+        if(this.even == E.even) return true;
         return false;
     }
+
     //TODO: HW6
     //design a method that adds two Even objects to create a third
     //that is the sum of the two.
