@@ -26,12 +26,19 @@ public class EvenTester {
         //TODO: HW6
         //Create E4 as the sum of E1 and E2 using the add method
         //display it
-
+        System.out.println("E1: " + E1 + " E2: " + E2);
+        Even E4 = E1.add(E2);
+        System.out.println("E1: " + E1 + " E2: " + E2 + " E4: " + E4);
         //Add 5 to E3 using the add method
+        System.out.println("E3: " + E3);
+        E3 = E3.add(5);
         //display it
-
+        System.out.println("E3: " + E3);
         //do the following in one instruction
         //E1 = E2+9+E1
+        E1 = (E2.add(9)).add(E1);
+        //Or in thiss case E1 = E1.add(E2.add(9));
         //display it.
+        System.out.println("E1: " + E1);
     }
 }

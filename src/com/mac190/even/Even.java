@@ -68,8 +68,9 @@ public class Even {
         //as the sum of this and E
         //create a third object. Set its even to the sum of even of this and
         //even of E.
-
+        Even thirdObject = new Even(this.even + E.even);
         //return the created object.
+        return thirdObject;
     }
     //Same method but input is an integer: We call this overloading.
     //You can overload as long as the return type is the same and
@@ -81,7 +82,14 @@ public class Even {
         //as the sum of this and integer a
         //create a third object. Set its even to the sum of even of this and
         //a.
-
+        Even thirdObject = new Even(this.even + a);
         //return the created object.
+        return thirdObject;
     }
+
+    /* This is not allowed. You cannot overload based on the return type only.
+    public int add(Even E){
+
+    }
+     */
 }
