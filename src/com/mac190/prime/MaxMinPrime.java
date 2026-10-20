@@ -28,7 +28,7 @@ as the sum of the two MaxMinPrime objects.
 - public MaxMinPrime add(MaxMin m) returns a MaxMinPrime object
 where min of m is added to min of MaxMinPrime etc...
 - public MaxMinPrime add(int a) where a is added to both min and max
-- implement all methods above as static methods.
+- implement all add methods above as static methods.
 - Test your class extensively.
  */
 public class MaxMinPrime {
