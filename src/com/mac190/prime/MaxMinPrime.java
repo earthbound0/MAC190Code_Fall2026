@@ -52,13 +52,27 @@ public class MaxMinPrime {
         max = new Prime(p.getPrime());
     }
     public MaxMinPrime(int a, int b){
-
+        min = new Prime(a);
+        max = new Prime(b);
+        if(a > b){
+            Prime temp = min;
+            min = max;
+            max = temp;
+        }
     }
     public MaxMinPrime(Prime a, Prime b){
-
+        min = new Prime(a.getPrime());
+        max = new Prime(b.getPrime());
+        if(a.getPrime() > b.getPrime()){
+            //swap min and max
+            Prime temp = min;
+            min = max;
+            max = temp;
+        }
     }
     public MaxMinPrime(MaxMin m){
-
+        min = new Prime(m.getMin());
+        max = new Prime(m.getMax());
     }
 
 }
