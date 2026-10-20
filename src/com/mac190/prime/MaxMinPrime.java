@@ -1,4 +1,7 @@
 package com.mac190.prime;
+
+import com.mac190.maxmin.MaxMin;
+
 /*
 Implement the same class MaxMin we did before with the member
 variables max and min being Prime objects NOT integers.
@@ -48,6 +51,14 @@ public class MaxMinPrime {
         min = new Prime(p.getPrime());
         max = new Prime(p.getPrime());
     }
+    public MaxMinPrime(int a, int b){
 
+    }
+    public MaxMinPrime(Prime a, Prime b){
+
+    }
+    public MaxMinPrime(MaxMin m){
+
+    }
 
 }
