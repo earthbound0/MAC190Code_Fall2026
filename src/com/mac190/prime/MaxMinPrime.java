@@ -75,4 +75,8 @@ public class MaxMinPrime {
         max = new Prime(m.getMax());
     }
 
+    public String toString(){
+        return "(" + this.min.getPrime() + ", " + this.max.getPrime() + ")";
+    }
+
 }
