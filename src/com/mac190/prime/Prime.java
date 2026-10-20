@@ -96,5 +96,11 @@ public class Prime {
 
     }
     //implement the method above as a static method. test it.
+    public static Prime add(Prime t, int a){
+        //how many objects will there be?
+        //Two objects: this and the returned Prime object
+        return new Prime(t.prime + a);
+
+    }
 
 }

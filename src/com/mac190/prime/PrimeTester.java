@@ -26,6 +26,9 @@ public class PrimeTester {
         //add P1 and P2 into P3 using the static method add
         Prime P3 = Prime.add(P1, P2);
         System.out.println("P3: " + P3);
+        //add 15 to P3 using the statuic method
+        P3 = Prime.add(P3, 15);
+        System.out.println("P3: " + P3);
 
     }
 }
