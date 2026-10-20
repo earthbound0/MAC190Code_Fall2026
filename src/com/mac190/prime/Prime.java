@@ -24,4 +24,77 @@ private boolean isPrime(int a){
 }
  */
 public class Prime {
+    private int prime;
+
+    public Prime(){
+        prime = 2;
+    }
+    public Prime(int a){
+        this.setPrime(a);
+    }
+
+    //getters
+    public int getPrime(){
+        return prime;
+    }
+    public static boolean isPrime(int a){
+        //In static methods there is no "this" as they are
+        //invoked on the class not on an object.
+        if(a == 2){
+            return true;
+        }
+        if(a < 2){
+            return false;
+        }
+        if(a%2 == 0){
+            return false;
+        }
+        for(int i = 3; i <= Math.sqrt(a); i += 2){
+            if(a%i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+    //setter
+    public void setPrime(int a){
+        while(!isPrime(a)){
+            a++;
+        }
+        //a is prime now
+        prime = a;
+    }
+    public String toString(){
+        return "" + prime;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !obj.getClass().equals(this.getClass())) {
+            return false;
+        }
+        Prime p = (Prime) obj;
+        return (p.prime == this.prime);
+    }
+    public Prime add(Prime p){
+        //how many objects should there be?
+        //There will be three: p, this and the returned
+        //object
+        return new Prime(p.prime + this.prime);
+    }
+    //any method can be implemented as a static method.
+    //In a member method there is this object that is implicit
+    //all you need to make it explicit in a static method
+    public static Prime add(Prime p, Prime t){
+        return new Prime(p.prime + t.prime);
+    }
+
+    public Prime add(int a){
+        //how many objects will there be?
+        //Two objects: this and the returned Prime object
+        return new Prime(this.prime + a);
+
+    }
+    //implement the method above as a static method. test it.
+
 }
