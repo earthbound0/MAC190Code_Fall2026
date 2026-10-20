@@ -27,10 +27,27 @@ where min of m is added to min of MaxMinPrime etc...
 - public MaxMinPrime add(int a) where a is added to both min and max
 - implement all methods above as static methods.
 - Test your class extensively.
-
-
  */
 public class MaxMinPrime {
     private Prime max, min;
+    public MaxMinPrime(){
+        min = new Prime();
+        max = new Prime();
+    }
+    public MaxMinPrime(int a){
+        min = new Prime(a);
+        max = new Prime(a);
+    }
+    public MaxMinPrime(Prime p){
+        /*
+        min = p;
+        max = p;
+        Never do this, because min and max will refer to the same
+        object, you have the same object!.
+         */
+        min = new Prime(p.getPrime());
+        max = new Prime(p.getPrime());
+    }
+
 
 }
