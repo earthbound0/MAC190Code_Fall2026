@@ -32,6 +32,10 @@ public class Prime {
     public Prime(int a){
         this.setPrime(a);
     }
+    //copy constructor
+    public Prime(Prime p){
+        prime = p.prime;
+    }
 
     //getters
     public int getPrime(){

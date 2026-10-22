@@ -43,6 +43,11 @@ public class MaxMin {
             max = a;
         }
     }
+    //copy constructor
+    public MaxMin(MaxMin m){
+        min = m.getMin();
+        max = m.getMax();
+    }
     //getters
     public int getMin(){
         return min;

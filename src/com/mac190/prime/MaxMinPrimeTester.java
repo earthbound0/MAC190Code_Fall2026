@@ -15,6 +15,14 @@ public class MaxMinPrimeTester {
         //make a MaxMinPrime object from M1
         MaxMinPrime MP2 = new MaxMinPrime(M1);
         System.out.println("MP2: " + MP2);
+        //copy constructor
+        MaxMinPrime MP3 =  new MaxMinPrime(MP2);
+        System.out.println("MP3: " + MP3);
+        //MP3 = MP3 + MP1 + 4
+        //MP3 = MP3.add(MP1.add(4));
+        //using static methods
+        MP3 = MaxMinPrime.add(MP3, MaxMinPrime.add(MP1, 4));
+        System.out.println("MP3: " + MP3);
 
     }
 }
