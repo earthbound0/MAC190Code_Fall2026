@@ -23,8 +23,15 @@ public class MidtermTester {
         Cube C2 = new Cube(C1);
         System.out.println("C2: " + C2);
         //using the static method add, add C2 to C1.
-
+        C1 = Cube.add(C1, C2);
+        System.out.println("C1: " + C1);
         //Make a Cube C3 that is the sum of C2 and a Cube made of R2 and 10,
         //first do it in two instructions, then do it using only ONE instruction.
+        /*
+        Cube temp = new Cube(R2, 10);
+        Cube C3 = C2.add(temp);
+         */
+        Cube C3 = C2.add(new Cube(R2, 10));
+        System.out.println("C3: " + C3);
     }
 }
